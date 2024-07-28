@@ -6,7 +6,7 @@
 
 		<ul>
 			<li>
-				<a href="https://https://ess.gov.bc.ca/" class="anchor">
+				<a href="https://ess.gov.bc.ca/" class="anchor">
 					Provincial Emergency Support Services</a
 				> Register here for support if you've been evacuated.
 			</li>
