@@ -14,6 +14,13 @@
 			>.
 		</p>
 
+    <p>
+      If you need to change or remove your offer, please contact us by <a
+      href="mailto:romeda@gmail.com" class="anchor">email</a>, text at
+      250-278-7978, or on <a href="https://www.facebook.com/romeda"
+      class="anchor">Facebook</a> and we'll get back to you as soon as we can.
+    </p>
+
     <div class="table-container w-full">
 		<table class="w-full table-fixed flex flex-row flex-no-wrap overflow-hidden">
 			<thead>
@@ -57,8 +64,8 @@
     td:not(:last-child) {
       border-bottom: 0;
     }
-    th:not(:last-child) {
+    /* th:not(:last-child) {
       border-bottom: 2px solid rgba(0, 0, 0, .1);
-    }
+    } */
   }
 </style>
