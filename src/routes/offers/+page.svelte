@@ -3,7 +3,8 @@
 </script>
 
 
-<div class="container space-y-5 ml-2 mr-2">
+<div class="container justify-center items-center mx-auto md:mt-5 md:mb-32">
+  <div class="space-y-5">
 		<h2 class="h2"><a href="/">Slocan Helps</a>: Offers of Help</h2>
 
 		<p>
@@ -13,16 +14,16 @@
 			>.
 		</p>
 
-    <div class="table-container sm:w-full w-full">
+    <div class="table-container w-full">
 		<table class="w-full table-fixed flex flex-row flex-no-wrap overflow-hidden">
 			<thead>
 				{#each data.data as offer}
 				<tr class="bg-teal-400 flex flex-col flex-no wrap sm:table-row sm:rounded-none mb-2 sm:mb-0">
 					<th class="text-left h-7">Name</th>
-					<th class="text-left h-7 w-32">Community</th>
-					<th class="text-left h-7 w-32">Type</th>
+					<th class="text-left h-7 md:w-32">Community</th>
+					<th class="text-left h-7 md:w-32">Type</th>
 					<th class="text-left h-7 md:w-1/2">Offer</th>
-					<th class="text-left h-7">Contact Details</th>
+					<th class="text-left h-7 md:w-48">Contact Details</th>
 				</tr>
         {/each}
 			</thead>
@@ -35,13 +36,13 @@
 						<td class="h-7 w-32 md:overflow-hidden">{(offer.Type && offer.Type[1]) || offer.Type_if_Other_ || '?'}</td
 						>
 						<td class="overflow-hidden h-7 md:pl-2 md:w-1/2">{offer.Offer}</td>
-						<td class="overflow-hidden h-7">{offer.Contact_Details}</td>
+						<td class="overflow-hidden h-7 md:w-48">{offer.Contact_Details}</td>
 					</tr>
 				{/each}
 			</tbody>
 		</table></div>
 
-	</div>
+	</div></div>
 
 <style>
    @media (min-width: 640px) {
