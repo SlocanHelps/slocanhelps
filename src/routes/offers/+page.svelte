@@ -27,8 +27,8 @@
 				{#each data.data as offer}
 				<tr class="bg-teal-400 border-b-1 flex flex-col flex-no wrap sm:table-row sm:rounded-none mb-2 sm:mb-0">
 					<th class="text-left h-7 p-0 px-1 md:p-2">Name</th>
-					<th class="text-left h-7 md:w-32 p-0 px-1 md:p-2">Community</th>
-					<th class="text-left h-7 md:w-32 p-0 px-1 md:p-2">Type</th>
+					<th class="text-left h-7 md:w-40 p-0 px-1 md:p-2">Community</th>
+					<th class="text-left h-7 md:w-40 p-0 px-1 md:p-2">Type</th>
 					<th class="text-left h-7 md:w-1/2 p-0 px-1 md:p-2">Offer</th>
 					<th class="text-left h-7 md:w-48 p-0 px-1 md:p-2">Contact Details</th>
 				</tr>
@@ -38,9 +38,9 @@
 				{#each data.data as offer}
 					<tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0 even:bg-slate-100 text-slate-950 odd:bg-slate-200">
 						<td class="sm:py-0 h-7">{offer.Name}</td>
-						<td class="h-7 sm:w-32">{offer.gristHelper_Display2 || offer.Community_if_Other_ || 'Other'}</td
+						<td class="h-7 sm:w-40">{offer.gristHelper_Display2 || offer.Community_if_Other_ || 'Other'}</td
 						>
-						<td class="h-7 sm:w-32 overflow-hidden">{(offer.Type && offer.Type[1]) || offer.Type_if_Other_ || '?'}</td
+						<td class="h-7 sm:w-40 overflow-hidden">{(offer.Type && offer.Type[1]) || offer.Type_if_Other_ || '?'}</td
 						>
 						<td class="overflow-hidden h-7 md:pl-2 md:w-1/2">{offer.Offer}</td>
 						<td class="overflow-hidden h-7 md:w-48">{offer.Contact_Details}</td>
