@@ -1,11 +1,10 @@
 <script lang="typescript">
 	import { page } from '$app/stores';
-  import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+  import { TabGroup, TabAnchor } from '@skeletonlabs/skeleton';
   import Icon from '@iconify/svelte';
- 
 
 	export let data;
-  export let type = $page.url.hash.replace('#', '');
+  let type = $page.url.hash.replace('#', '');
 
   let filteredData = data.data;
 
@@ -20,19 +19,20 @@
 
   $: type = $page.url.hash.replace('#', '');
 
-  $: { console.log(type);
+  $: {
+
     filteredData = data.data.filter((offer) => {
-    console.log(offer)
-    if (type === '') return true;
-    if (type === 'accommodation') return offer.Type && offer.Type[1] === 'Accommodation';
-    if (type === 'animals') return offer.Type && offer.Type[1] === 'Animals';
-    if (type === 'transportation') return offer.Type && offer.Type[1] === 'Transportation';
-    if (type === 'labour') return offer.Type && offer.Type[1] === 'Labour';
-    if (type === 'support') return offer.Type && offer.Type[1] === 'Community Support';
-    if (type === 'food') return offer.Type && offer.Type[1] === 'Food';
-    return true;
-  })
-};
+      if (type === '') return true;
+      if (type === 'accommodation') return offer.Type && offer.Type[1] === 'Accommodation';
+      if (type === 'animals') return offer.Type && offer.Type[1] === 'Animals';
+      if (type === 'transportation') return offer.Type && offer.Type[1] === 'Transportation';
+      if (type === 'labour') return offer.Type && offer.Type[1] === 'Labour';
+      if (type === 'support') return offer.Type && offer.Type[1] === 'Community Support';
+      if (type === 'food') return offer.Type && offer.Type[1] === 'Food';
+      return true;
+    })
+  };
+
 </script>
 
 
@@ -67,13 +67,8 @@
     class="w-full"
     rounded=""
     border="">
-  <!-- import FluentEmojiHighContrastGoat from 'virtual:icons/fluent-emoji-high-contrast/goat';
-  import FluentEmojiHighContrastHome from '~icons/fluent-emoji-high-contrast/house-with-garden';
-  import FluentEmojiHighContrastCar from '~icons/fluent-emoji-high-contrast/sport-utility-vehicle';
-  import FluentEmojiHighContrastArm from '~icons/fluent-emoji-high-contrast/flexed-biceps';
-  import FluentEmojiHighContrastHug from '~icons/fluent-emoji-high-contrast/people-hugging';
-  -->
-    <TabAnchor href="/offers" selected={$page.url.hash === ''}>All Offers</TabAnchor>
+
+    <TabAnchor href="/offers#" selected={$page.url.hash === ''}>All Offers</TabAnchor>
     <TabAnchor href="/offers#accommodation" selected={$page.url.hash === '#accommodation'}>
       <div class="flex items-center">
         <Icon icon="fluent-emoji-high-contrast:house-with-garden" />&nbsp; Accommodation
