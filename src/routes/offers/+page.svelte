@@ -23,12 +23,12 @@
 
     filteredData = data.data.filter((offer) => {
       if (type === '') return true;
-      if (type === 'accommodation') return offer.Type && offer.Type[1] === 'Accommodation';
-      if (type === 'animals') return offer.Type && offer.Type[1] === 'Animals';
-      if (type === 'transportation') return offer.Type && offer.Type[1] === 'Transportation';
-      if (type === 'labour') return offer.Type && offer.Type[1] === 'Labour';
-      if (type === 'support') return offer.Type && offer.Type[1] === 'Community Support';
-      if (type === 'food') return offer.Type && offer.Type[1] === 'Food';
+      if (type === 'accommodation') return offer.Type && offer.Type.indexOf('Accommodation') !== -1;
+      if (type === 'animals') return offer.Type && offer.Type.indexOf('Animals') !== -1;
+      if (type === 'transportation') return offer.Type && offer.Type.indexOf('Transportation') !== -1;
+      if (type === 'labour') return offer.Type && offer.Type.indexOf('Labour') !== -1;
+      if (type === 'support') return offer.Type && offer.Type.indexOf('Community Support') !== -1;
+      if (type === 'food') return offer.Type && offer.Type.indexOf('Food') !== -1;
       return true;
     })
   };
