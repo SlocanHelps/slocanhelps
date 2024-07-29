@@ -12,6 +12,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.231",
     "@skeletonlabs/skeleton": "2.10.2",
     "@skeletonlabs/tw-plugin": "0.4.0",
     "@sveltejs/adapter-auto": "^3.0.0",
@@ -37,6 +38,8 @@
   },
   "type": "module",
   "dependencies": {
-    "grist-api": "^0.1.7"
+    "@iconify/svelte": "^4.0.2",
+    "grist-api": "^0.1.7",
+    "unplugin-icons": "^0.19.0"
   }
 }
