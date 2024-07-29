@@ -9,7 +9,7 @@
 			it. Running this site takes some effort, and is currently run by an evacuee (<a
 				href="https://facebook.com/romeda">Blaine</a
 			>, who is evacuated from Enterprise Creek and currently in Nelson). Any help is greatly
-			appreciated, whether it's getting the word out about this resource or helpint to keep it
+			appreciated, whether it's getting the word out about this resource or helping to keep it
 			running smoothly.
 		</p>
 
