@@ -1,4 +1,4 @@
-<div class="container h-full ml-32 flex items-center">
+<div class="container h-full ml-4 md:ml-32 flex items-center">
 	<div class="space-y-5 pt-5 w-full md:w-2/3">
 		<h1 class="h1">Slocan Helps</h1>
 
@@ -15,19 +15,19 @@
 			> as they are the most up-to-date and comprehensive sources of information.
 		</p>
 
-		<div class="flex justify-around">
-			<div class="w-full md:w-2/5 p-8 bg-secondary-300 text-zinc-800">
+		<div class="flex flex-wrap space-y-4 md:space-y-0 items-center justify-around">
+			<div class="w-4/5 md:w-2/5 h-auto md:h-32 p-4 m-0 bg-primary-100 text-zinc-800 rounded-lg">
 				<div class="text-center text-xl">I'm an evacuee looking for help</div>
 
-				<div class="mt-8 text-center">
+				<div class="mt-4 md:mt-4 text-center font-bold">
 					<a href="/offers" class="btn variant-filled-primary">View Offers of Help</a>
 				</div>
 			</div>
 
-			<div class="w-full md:w-2/5 p-8 bg-secondary-300 text-zinc-800">
+			<div class="w-4/5 md:w-2/5 h-auto md:h-32 p-4 m-0 bg-primary-100 text-zinc-800 rounded-lg">
 				<div class="text-center text-xl">I'd like to help</div>
 
-				<div class="mt-8 text-center">
+				<div class="mt-4 md:mt-4 text-center font-bold">
 					<a href="/offers" class="btn variant-filled-primary">Offer Your Help</a>
 				</div>
 			</div>
