@@ -60,11 +60,9 @@
   </div>
 
   <TabGroup
-    justify="justify-center"
     active="variant-filled-primary"
     hover="hover:variant-soft-primary"
-    flex="flex-none"
-    class="w-full"
+    class=""
     rounded=""
     border="">
 
