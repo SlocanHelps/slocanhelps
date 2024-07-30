@@ -100,7 +100,7 @@
 			<thead>
 				<tr class="bg-teal-400 border-b-1 flex flex-col flex-nowrap invisible absolute sm:visible sm:static sm:table-row sm:rounded-none mb-2 sm:mb-0">
 					<th class="text-left p-0 px-1 md:p-2">Name</th>
-					<th class="text-left md:w-40 p-0 px-1 md:p-2">Community</th>
+					<th class="text-left p-0 px-1 md:p-2">Community</th>
 					<th class="text-left md:w-1/2 p-0 px-1 md:p-2">Offer</th>
 					<th class="text-left md:w-48 p-0 px-1 md:p-2">Contact Details</th>
 				</tr>
