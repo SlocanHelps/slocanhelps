@@ -37,7 +37,7 @@
 
 		<p>
 			We'll try to add more resources and information as we can. If you have any questions or need
-			help, please contact Blaine <a href="mailto:romeda@gmail.com">by email</a> at romeda dot gmail
+			help, please contact Blaine <a href="mailto:romeda@gmail.com">by email</a> at romeda at gmail
 			dot com or <a href="https://www.facebook.com/romeda">via Facebook Messenger</a>.
 		</p>
 	</div>

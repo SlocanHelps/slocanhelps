@@ -60,11 +60,9 @@
   </div>
 
   <TabGroup
-    justify="justify-center"
     active="variant-filled-primary"
     hover="hover:variant-soft-primary"
-    flex="flex-none"
-    class="w-full"
+    class=""
     rounded=""
     border="">
 
@@ -98,24 +96,22 @@
   </TabGroup>
 
   <div class="table-container w-full">
-		<table class="w-full table-fixed flex flex-row flex-no-wrap overflow-hidden">
+		<table class="w-full table-fixed flex flex-row flex-nowrap overflow-hidden">
 			<thead>
-				{#each filteredData as offer}
-				<tr class="bg-teal-400 border-b-1 flex flex-col flex-no wrap sm:table-row sm:rounded-none mb-2 sm:mb-0">
-					<th class="text-left h-7 p-0 px-1 md:p-2">Name</th>
-					<th class="text-left h-7 md:w-40 p-0 px-1 md:p-2">Community</th>
-					<th class="text-left h-7 md:w-1/2 p-0 px-1 md:p-2">Offer</th>
-					<th class="text-left h-7 md:w-48 p-0 px-1 md:p-2">Contact Details</th>
+				<tr class="bg-teal-400 border-b-1 flex flex-col flex-nowrap invisible absolute sm:visible sm:static sm:table-row sm:rounded-none mb-2 sm:mb-0">
+					<th class="text-left p-0 px-1 md:p-2 sm:w-32">Name</th>
+					<th class="text-left p-0 px-1 md:p-2 sm:w-32">Community</th>
+					<th class="text-left md:w-1/2 p-0 px-1 md:p-2">Offer</th>
+					<th class="text-left md:w-48 p-0 px-1 md:p-2">Contact Details</th>
 				</tr>
-        {/each}
 			</thead>
 			<tbody class="flex-1 sm:flex-none">
 				{#each filteredData as offer}
-					<tr class="flex flex-col flex-no wrap sm:table-row mb-2 sm:mb-0 even:bg-slate-100 text-slate-950 odd:bg-slate-200">
-						<td class="py-0 md:px-2 h-7">{offer.Name}</td>
-						<td class="h-7 sm:w-40">{offer.gristHelper_Display2 || offer.Community_if_Other_ || 'Other'}</td
+					<tr class="flex flex-col flex-nowrap sm:table-row mb-2 sm:mb-0 even:bg-slate-100 text-slate-950 odd:bg-slate-200">
+						<td class="py-0 md:px-2" data-th="Name">{offer.Name}</td>
+						<td class="sm:w-40" data-th="Community">{offer.gristHelper_Display2 || offer.Community_if_Other_ || 'Other'}</td
 						>
-						<td class="overflow-hidden h-7 md:pl-2 md:w-1/2">
+						<td class="overflow-hidden md:pl-2 md:w-1/2" data-th="Offer">
               <span class="flex">
                 <span class="flex">
                 {#if offer.Type}
@@ -129,7 +125,7 @@
                 {offer.Offer}
               </span>
             </td>
-						<td class="overflow-hidden h-7 md:w-48">{offer.Contact_Details}</td>
+						<td class="overflow-hidden md:w-48 break-words" data-th="Contact">{offer.Contact_Details}</td>
 					</tr>
 				{/each}
 			</tbody>
@@ -150,8 +146,14 @@
     td:not(:last-child) {
       border-bottom: 0;
     }
-    /* th:not(:last-child) {
-      border-bottom: 2px solid rgba(0, 0, 0, .1);
-    } */
+  }
+
+  @media (max-width: 640px) {
+    td::before {
+      content: attr(data-th)": ";
+      font-weight: bold;
+      color: rgb(36, 44, 70);
+    }
+    
   }
 </style>
