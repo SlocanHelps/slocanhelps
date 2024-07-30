@@ -99,8 +99,8 @@
 		<table class="w-full table-fixed flex flex-row flex-nowrap overflow-hidden">
 			<thead>
 				<tr class="bg-teal-400 border-b-1 flex flex-col flex-nowrap invisible absolute sm:visible sm:static sm:table-row sm:rounded-none mb-2 sm:mb-0">
-					<th class="text-left p-0 px-1 md:p-2">Name</th>
-					<th class="text-left p-0 px-1 md:p-2">Community</th>
+					<th class="text-left p-0 px-1 md:p-2 sm:w-32">Name</th>
+					<th class="text-left p-0 px-1 md:p-2 sm:w-32">Community</th>
 					<th class="text-left md:w-1/2 p-0 px-1 md:p-2">Offer</th>
 					<th class="text-left md:w-48 p-0 px-1 md:p-2">Contact Details</th>
 				</tr>
@@ -125,7 +125,7 @@
                 {offer.Offer}
               </span>
             </td>
-						<td class="overflow-hidden md:w-48" data-th="Contact">{offer.Contact_Details}</td>
+						<td class="overflow-hidden md:w-48 break-words" data-th="Contact">{offer.Contact_Details}</td>
 					</tr>
 				{/each}
 			</tbody>
