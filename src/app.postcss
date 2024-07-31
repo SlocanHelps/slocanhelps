@@ -3,9 +3,101 @@
 @tailwind utilities;
 @tailwind variants;
 
-/* modern theme */
-@font-face {
-	font-family: 'Quicksand';
-	src: url('/fonts/Quicksand.ttf');
-	font-display: swap;
+html,
+body {
+	/* @apply ; */
+}
+
+html { -webkit-tap-highlight-color: rgba(128, 128, 128, 0.5); }
+
+h1, h2, h3, h4, h5, h6 {
+	@apply text-balance mt-6 mb-2;
+}
+
+/* Customizations & Aggregations */
+
+.dashboard-list {
+	@apply card variant-ghost-primary card-hover w-full text-center sm:w-[48%] mr-1 my-2;
+}
+.dashboard-list a {
+	@apply block p-4 text-[1.4rem] text-primary-700 font-bold;
+}
+
+
+
+/* Buttons */
+
+.btn:active,
+.btn-icon:active {
+	--tw-scale-x: 100% !important;
+	--tw-scale-y: 100% !important;
+	--tw-brightness: brightness(1) !important;
+	--tw-translate-x: 0;
+	--tw-translate-y: 0;
+}
+[class*='variant-outline-'],
+[class*='variant-ghost-'],
+[class*='variant-ringed-'] {
+	color: var(--tw-ring-color);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-track {
+	@apply !bg-surface-100-800-token border-x;
+}
+
+::-webkit-scrollbar {
+	width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 3px solid rgba(0, 0, 0, 0);
+	background-clip: padding-box;
+	@apply bg-surface-300-600-token;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-surface-400-500-token;
+}
+
+/* Gradient heading */
+
+.gradient-heading {
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	@apply bg-gradient-to-br;
+	@apply from-primary-500 to-secondary-500;
+}
+
+/* Horizontal rule */
+
+hr {
+	@apply opacity-50;
+}
+
+/* Typography */
+
+.prose {
+	@apply text-base leading-6 space-y-3;
+	h1 {
+		@apply text-balance text-4xl leading-8 font-extrabold my-8;
+	}
+	h2 {
+		@apply text-balance text-2xl leading-6 font-bold !mt-10 !mb-6;
+	}
+	h3 {
+		@apply text-balance text-xl leading-5 font-semibold mt-4 mb-2;
+	}
+	ul {
+		@apply list-disc pl-6 my-10;
+	}
+	ol {
+		@apply list-decimal pl-5 my-8;
+	}
+	a {
+		@apply anchor;
+	}
+	code {
+		@apply bg-gray-800 text-white p-3 rounded-xl block;
+	}
 }
