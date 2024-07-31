@@ -6,7 +6,7 @@
 	export let data;
   let type = $page.url.hash.replace('#', '');
 
-  let filteredData = data.data;
+  let filteredData = data.sortedData;
 
   const typeMap = {
     'Accommodation': 'fluent-emoji-high-contrast:house-with-garden',
@@ -21,7 +21,7 @@
 
   $: {
 
-    filteredData = data.data.filter((offer) => {
+    filteredData = data.sortedData.filter((offer) => {
       if (type === '') return true;
       if (type === 'accommodation') return offer.Type && offer.Type.indexOf('Accommodation') !== -1;
       if (type === 'animals') return offer.Type && offer.Type.indexOf('Animals') !== -1;
@@ -77,7 +77,6 @@
         <Icon icon="fluent-emoji-high-contrast:goat" />&nbsp; Animals
       </div>
     </TabAnchor>
-      <!-- <FluentEmojiHighContrastGoat /> Animals</TabAnchor> -->
     <TabAnchor href="/offers#transportation" selected={$page.url.hash === '#transportation'}>
       <div class="flex items-center">
         <Icon icon="fluent-emoji-high-contrast:sport-utility-vehicle" />&nbsp; Transportation
@@ -109,8 +108,7 @@
 				{#each filteredData as offer}
 					<tr class="flex flex-col flex-nowrap sm:table-row mb-2 sm:mb-0 even:bg-slate-100 text-slate-950 odd:bg-slate-200">
 						<td class="py-0 md:px-2" data-th="Name">{offer.Name}</td>
-						<td class="sm:w-40" data-th="Community">{offer.gristHelper_Display2 || offer.Community_if_Other_ || 'Other'}</td
-						>
+						<td class="sm:w-40" data-th="Community">{offer.gristHelper_Display2 || offer.Community_if_Other_ || 'Other'}</td>
 						<td class="overflow-hidden md:pl-2 md:w-1/2" data-th="Offer">
               <span class="flex">
                 <span class="flex">
