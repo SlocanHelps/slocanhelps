@@ -4,8 +4,8 @@ export const material: CustomThemeConfig = {
 	name: 'material',
 	properties: {
 		// =~= Theme Properties =~=
-		'--theme-font-family-base': `ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif`,
-		'--theme-font-family-heading': `ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif`,
+		'--theme-font-family-base': `system-ui, sans-serif;`,
+		'--theme-font-family-heading': `system-ui, sans-serif;`,
 		'--theme-font-color-base': '0 0 0',
 		'--theme-font-color-dark': '255 255 255',
 		'--theme-rounded-base': '8px',
