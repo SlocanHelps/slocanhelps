@@ -36,12 +36,10 @@
 </script>
 
 
-<div class="container justify-center items-center mx-auto md:mt-5 md:mb-32">
 
-  <div class="space-y-5">
-
-  <div class="pl-2 pr-2">
-		<h2 class="h2"><a href="/">Slocan Helps</a>: Offers of Help</h2>
+<div>
+  <div class="">
+		<h2 class="h2">Offers of Help</h2>
 
 		<p>
 			If you have something to offer evacuees, you can <a
@@ -56,7 +54,6 @@
       250-278-7978, or on <a href="https://www.facebook.com/romeda"
       class="anchor">Facebook</a> and we'll get back to you as soon as we can.
     </p>
-
   </div>
 
   <TabGroup
@@ -131,7 +128,7 @@
 			</tbody>
 		</table></div>
 
-	</div></div>
+  </div>
 
 <style>
    @media (min-width: 640px) {
