@@ -6,7 +6,7 @@
 	export let data;
   let type = $page.url.hash.replace('#', '');
 
-  let filteredData = data.data;
+  let filteredData = data.sortedData;
 
   const typeMap = {
     'Accommodation': 'fluent-emoji-high-contrast:house-with-garden',
@@ -21,7 +21,7 @@
 
   $: {
 
-    filteredData = data.data.filter((offer) => {
+    filteredData = data.sortedData.filter((offer) => {
       if (type === '') return true;
       if (type === 'accommodation') return offer.Type && offer.Type.indexOf('Accommodation') !== -1;
       if (type === 'animals') return offer.Type && offer.Type.indexOf('Animals') !== -1;
@@ -67,7 +67,6 @@
         <Icon icon="fluent-emoji-high-contrast:goat" />&nbsp; Animals
       </div>
     </TabAnchor>
-      <!-- <FluentEmojiHighContrastGoat /> Animals</TabAnchor> -->
     <TabAnchor href="/offers#transportation" selected={$page.url.hash === '#transportation'}>
       <div class="flex items-center">
         <Icon icon="fluent-emoji-high-contrast:sport-utility-vehicle" />&nbsp; Transportation
