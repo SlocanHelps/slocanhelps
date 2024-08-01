@@ -1,3 +1,12 @@
+# slocanhelps.org
+
+Shared Community Resources for people affected by the 2024 Slocan & Kootenay Lake Wildfires
+
+Contributions welcome!
+
+
+---
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
